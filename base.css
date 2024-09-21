@@ -1,0 +1,177 @@
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    /* 1.6rem = 16px */
+    line-height: 1.6rem; 
+    font-family: Verdana, sans-serif;
+    box-sizing: border-box;
+}
+:root {
+    --white-color: #fff;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.4);
+    align-items: center;
+    justify-content: center; 
+    display: none;
+}
+.modal.open {
+    display: flex;
+}
+.modal-layout.show {
+    display: flex;
+}
+.modal-container {
+    background-color: #fff;
+    min-height: 200px;
+    width: 900px;
+    max-width: calc(100% - 32px);
+    position: relative;
+    animation: modalFadeIn ease .5s;
+}
+.modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 2rem;
+    color: #fff;
+    padding: 12px;
+    cursor: pointer;
+    opacity: 0.9;
+}
+.modal-close:hover {
+    opacity: 1;
+}
+.modal-header {
+    font-size: 3rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 130px;
+    letter-spacing: 4px;
+    background-color: #009688;
+}
+.modal-heading-icon {
+    margin-right: 16px;
+}
+.modal-body {
+    padding: 16px 16px 0 16px;
+}
+.modal-label {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+.modal-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+}
+#buy-tickets-btn {
+    text-transform: uppercase;
+    padding: 15px;
+    color: #fff;
+    background-color: #009688;
+    border: none;
+    width: 100%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all ease .2s;
+}
+#buy-tickets-btn:hover {
+    color: #000;
+    background-color: #ccc;
+}
+.modal-footer {
+    text-align: right;
+    font-size: 1.4rem;
+    padding-bottom: 35px;
+    margin-right: 16px;
+    margin-top: 35px;
+}
+.modal-footer a {
+    color: #2196F3;
+}
+
+/* modal animation */
+@keyframes modalFadeIn {
+    from {
+        transform: translateY(-140px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* Media Container */
+.media-container {
+    color: #fff;
+    position: relative;
+    animation: modalFadeIn ease .5s;
+}
+.media-container img {
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 0 0px 8px 1px rgb(203 199 199 / 80%);
+    height: 250px;
+    border-radius: 10px;
+}
+.media-container h4 {
+    font-size: 3.5rem;
+
+}
+.media-container p {
+    font-size: 1.4rem;
+    border-bottom: 1px solid #ccc;
+}
+.media-container .text-inc {
+    position: absolute;
+    bottom: 40px;
+    right: 0;
+    text-align: right;
+    padding-right: 25px;
+    line-height: 1.4;
+}
+.media-container .media-close {
+    font-size: 1.8rem;
+    position: absolute;
+    right: 0;
+    padding: 12px;
+}
+.media-container .media-close:hover {
+    opacity: 0.8;
+}
+.media-wifi {
+    position: absolute;
+    font-size: 8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px;
+}
+
+.modal-layout {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.4);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
